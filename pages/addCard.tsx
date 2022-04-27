@@ -51,7 +51,7 @@ const AddCard: NextPage<AddCardProps> = ({ deckId }) => {
                 <link rel="icon" href="/check.png" />
             </Head>    
             <div className={styles.topBar}>
-                <Link href={"/"}><button className={styles.topBarBack}></button></Link>
+                <Link href={"/"} passHref><button className={styles.topBarBack}></button></Link>
             </div>
             <div className={styles.toast} ref={toast}><span>Added card!</span></div>
             <div>

@@ -50,7 +50,11 @@ const AddDeck: NextPage = () => {
                 <link rel="icon" href="/check.png" />
             </Head>    
             <div className={styles.topBar}>
+<<<<<<< HEAD
+                <Link href={"/"} passHref><button className={styles.topBarBack}></button></Link>
+=======
                 <Link href={"/"}><button className={styles.topBarBack}></button></Link>
+>>>>>>> ee3831a (Initial commit, basic functionality working)
             </div>
             <div className={styles.toast} ref={toast}><span>Added card!</span></div>
             <div>

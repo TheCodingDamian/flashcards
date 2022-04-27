@@ -20,7 +20,6 @@
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
 
 
@@ -28,20 +27,13 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/TheCodingDamian/flashcards">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
-  </a>
 
 <h3 align="center">Flash/Cards</h3>
 
   <p align="center">
     A simple flashcard based study app.
     <br />
-    <a href="https://github.com/TheCodingDamian/flashcards"><strong>Explore the docs »</strong></a>
     <br />
-    <br />
-    <a href="https://github.com/TheCodingDamian/flashcards">View Demo</a>
-    ·
     <a href="https://github.com/TheCodingDamian/flashcards/issues">Report Bug</a>
     ·
     <a href="https://github.com/TheCodingDamian/flashcards/issues">Request Feature</a>
@@ -69,9 +61,7 @@
     </li>
     <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
@@ -81,9 +71,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `TheCodingDamian`, `flashcards`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`
+This is a study app that allows you to create flashcards and use them for (self-supervised) study. Flashcards can be designed with short title texts and longer content texts, and allow the use of LaTeX formulas for mathematical questions.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -93,12 +81,6 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 
 * [Next.js](https://nextjs.org/)
 * [React.js](https://reactjs.org/)
-* [Vue.js](https://vuejs.org/)
-* [Angular](https://angular.io/)
-* [Svelte](https://svelte.dev/)
-* [Laravel](https://laravel.com)
-* [Bootstrap](https://getbootstrap.com)
-* [JQuery](https://jquery.com)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -107,12 +89,11 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
+This project requires the existence of `npm` to run the server on your device. Make sure you install the latest version using
 * npm
   ```sh
   npm install npm@latest -g
@@ -120,19 +101,25 @@ This is an example of how to list things you need to use the software and how to
 
 ### Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+1. Clone the repository
    ```sh
    git clone https://github.com/TheCodingDamian/flashcards.git
    ```
-3. Install NPM packages
+2. Install NPM packages
    ```sh
    npm install
    ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
+
+3. Run the dev server using
+    ```sh
+    npm run dev
+    ```
+    or build and run the project using
+    ```sh
+    npm run deploy
+    ```
+
+4. Access the app through your browser on `http://localhost:3000`.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -141,9 +128,31 @@ This is an example of how to list things you need to use the software and how to
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+After running the server, you can access this app through your browser on `http://localhost:3000`.
+
+<div style="text-align: center">
+<img src="images/Home.jpeg" alt="Logo" width="124" height="230" style="border: 1px solid black; padding: 0px">
+</div>
+
+An example deck of flashcards has already been created, showing some of the app's basic features.
+You can open and view the deck by clicking it in the deck selection view.
+
+Alternatively, you can create a new study deck using the 'plus' icon in the top right. This will prompt you to select a new name for the deck (which has to be different from all other existing decks).
+
+Once you created a deck, you can add cards to it by clicking the 'plus' icon next to the deck in the deck selection view. This will open a new screen, allowing you to enter all necessary data for the creation of the card.
+
+<div style="text-align:center">
+<img src="images/Add-Card.jpeg" alt="Logo" width="124" height="230" style="border: 1px solid black; padding: 0px">
+<img src="images/Card-Lorem-Ipsum.jpeg" alt="Logo" width="124" height="230" style="border: 1px solid black; padding: 0px">
+<img src="images/Card-Maths.jpeg" alt="Logo" width="124" height="230" style="border: 1px solid black; padding: 0px">
+</div>
+
+Finally, you can study a deck by clicking it in the deck selection. This will start a new study session, containing the 20 cards with the highest difficulty score (difficulty scores are computed by the rate at which you choose the "yes" or "no" buttons while studying a card). 
+
+
+You can turn a card to check its backside by clicking on it. Pressing the "checkmark" or "cross" buttons allows you to indicate whether you were able to recall the necessary information.
+
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -152,33 +161,14 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 <!-- ROADMAP -->
 ## Roadmap
 
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-    - [ ] Nested Feature
-
-See the [open issues](https://github.com/TheCodingDamian/flashcards/issues) for a full list of proposed features (and known issues).
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-<!-- CONTRIBUTING -->
-## Contributing
-
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+- [x] API Routes
+- [x] Basic User Interface
+- [ ] Future UI Updates
+    - [ ] Responsive design
+    - [ ] Swipe cards for feedback
+- [ ] Even more awesomeness!
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
 
 
 <!-- LICENSE -->
@@ -190,21 +180,10 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 
 
-<!-- CONTACT -->
-## Contact
-
-Project Link: [https://github.com/TheCodingDamian/flashcards](https://github.com/TheCodingDamian/flashcards)
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-* []()
-* []()
-* []()
+* Thank you to [Best-README-Template](https://github.com/othneildrew/Best-README-Template) for the README template
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -221,5 +200,8 @@ Project Link: [https://github.com/TheCodingDamian/flashcards](https://github.com
 [issues-shield]: https://img.shields.io/github/issues/TheCodingDamian/flashcards.svg?style=for-the-badge
 [issues-url]: https://github.com/TheCodingDamian/flashcards/issues
 [license-shield]: https://img.shields.io/github/license/TheCodingDamian/flashcards.svg?style=for-the-badge
-[license-url]: https://github.com/TheCodingDamian/flashcards/blob/master/LICENSE.txt
-[product-screenshot]: images/screenshot.png
+[license-url]: LICENSE.txt
+[screenshot-home]: images/Home.jpeg
+[screenshot-card-1]: images/Card-Lorem-Ipsum.jpeg
+[screenshot-card-2]: images/Card-Maths.jpeg
+[screenshot-add]: images/Add-Card.jpeg

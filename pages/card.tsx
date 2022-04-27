@@ -8,7 +8,11 @@ import { useRouter } from 'next/router'
 import * as axios from 'axios'
 import next from 'next'
 import Link from 'next/link'
+<<<<<<< HEAD
+const katex = require('react-katex')
+=======
 import * as katex from 'react-katex'
+>>>>>>> ee3831a (Initial commit, basic functionality working)
 import 'katex/dist/katex.min.css';
 
 type CardViewProps = {
@@ -168,7 +172,11 @@ const Home: NextPage<HomeProps> = ({ deck }) => {
                 <link rel="icon" href="/check.png" />
             </Head>
             <div className={styles.topBar}>
+<<<<<<< HEAD
+                <Link href={"/"} passHref><button className={styles.topBarBack}></button></Link>
+=======
                 <Link href={"/"}><button className={styles.topBarBack}></button></Link>
+>>>>>>> ee3831a (Initial commit, basic functionality working)
             </div>
             <main className={styles.main}>
                 <div className={styles.cardContainer}>

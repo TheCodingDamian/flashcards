@@ -30,7 +30,11 @@ function colorScale(min: number, max: number, value: number) {
         { red: 255, green: 0, blue: 0 } 
     ];
     if (value >= max) {
+<<<<<<< HEAD
+        return "rgb(" + scale[scale.length - 1].red + ", " + scale[scale.length - 1].green + ", " + scale[scale.length - 1].blue + ")";
+=======
         return "rgb(" + scale[-1].red + ", " + scale[-1].green + ", " + scale[-1].blue + ")";
+>>>>>>> ee3831a (Initial commit, basic functionality working)
     }
     if (value <= min) {
         return "rgb(" + scale[0].red + ", " + scale[0].green + ", " + scale[0].blue + ")";
@@ -85,7 +89,11 @@ const DeckView: React.FC<DeckViewProps> = ({ deck })  => {
         <Link href={{
             pathname: "/card",
             query: { deck: deck.id }
+<<<<<<< HEAD
+        }} passHref>
+=======
         }}>
+>>>>>>> ee3831a (Initial commit, basic functionality working)
             <div className={styles.deck}>
                 <h2>{deck.id}</h2>
                 <button className={styles.deleteButton} onClick={deleteClick}></button>
@@ -93,7 +101,11 @@ const DeckView: React.FC<DeckViewProps> = ({ deck })  => {
                 <Link href={{
                     pathname: "/addCard",
                     query: { deck: deck.id }
+<<<<<<< HEAD
+                }} passHref>
+=======
                 }}>
+>>>>>>> ee3831a (Initial commit, basic functionality working)
                     <button className={styles.addButton}></button>
                 </Link>
                 <div className={styles.deckSize}>{deck.cards.length} cards</div>
@@ -117,7 +129,11 @@ const Home: NextPage<HomeProps> = ({ decks }) => {
                 <link rel="icon" href="/check.png" />
             </Head>    
             <div className={styles.topBar}>
+<<<<<<< HEAD
+                <Link href={"/addDeck"} passHref><button className={styles.topBarAdd}></button></Link>
+=======
                 <Link href={"/addDeck"}><button className={styles.topBarAdd}></button></Link>
+>>>>>>> ee3831a (Initial commit, basic functionality working)
             </div>
             <div>
             {decks.map((deck) => 
@@ -127,8 +143,13 @@ const Home: NextPage<HomeProps> = ({ decks }) => {
                 )
             })}
             </div>
+<<<<<<< HEAD
+            <Link href="/info" passHref>
+                <div className={styles.info}><Image src="/info.png" width="100%" height="100%" alt='i'/></div>
+=======
             <Link href="/info">
                 <div className={styles.info}><Image src="/info.png" width="100%" height="100%"/></div>
+>>>>>>> ee3831a (Initial commit, basic functionality working)
             </Link>
         </div>
     )

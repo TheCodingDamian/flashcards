@@ -16,7 +16,7 @@ const InfoPage: NextPage = () => {
                 <link rel="icon" href="/check.png" />
             </Head>    
             <div className={styles.topBar}>
-                <Link href={"/"}><button className={styles.topBarBack}></button></Link>
+                <Link href={"/"} passHref><button className={styles.topBarBack}></button></Link>
             </div>
             <div>
                 <h2>Flash/Cards App by <i>TheCodingDamian</i></h2><br/>
