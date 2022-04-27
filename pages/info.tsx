@@ -13,6 +13,7 @@ const InfoPage: NextPage = () => {
             <Head>
                 <title>Flash/Cards</title>
                 <meta name="description" content="Flashcard study app" />
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 <link rel="icon" href="/check.png" />
             </Head>    
             <div className={styles.topBar}>

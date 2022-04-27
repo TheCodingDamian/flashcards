@@ -1,6 +1,6 @@
 .container {
   padding: 0 2rem;
-  overflow: scroll;
+  overflow: auto;
   padding-top: 15vh;
 }
 
@@ -13,7 +13,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  overflow: scroll;
+  overflow: auto;
 }
 
 .footer {
@@ -235,4 +235,37 @@
   width: 8vw;
   height: 8vw;
   cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .deck {
+    width: 40vw;
+    height: 40vh;
+    margin-left: 30vw;
+    margin-bottom: 5%;
+  }
+
+  .deckSize {
+    margin-bottom: 5vh;
+  }
+
+  .cardScores {
+    height: 20vh;
+  }
+
+  .deleteButton {
+    width: 5vh;
+    height: 5vh;
+  }
+  .addButton {
+    width: 5vh;
+    height: 5vh;
+    right: calc(5vh + 10px);
+  }
+
+  .info {
+    width: 3vw;
+    height: 3vw;
+  }
+
 }

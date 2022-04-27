@@ -125,11 +125,13 @@
 
 
 .cardTitle {
+  position: relative;
   padding-bottom: 1.5%;
   border-bottom: 1px solid #a2c2ce;
   margin-bottom: 5%;
   height: 15%;
 }
+
 
 .cardText {
   overflow-x: scroll;
@@ -251,4 +253,42 @@
 
 .topBarBack:active {
   background-color: rgba(0, 0, 0, 0.3);
+}
+
+.cardTitle span {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+}
+
+@media (min-width: 768px) {
+  .card {
+    width: 50%;
+    height: 60vh;
+    left: 25%;
+    padding: 1.5%;
+  }
+
+  .cardTitle {
+    border-bottom: 1px solid #a2c2ce;
+    padding-bottom: 3vh;
+    margin-bottom: 5vh;
+    height: 15vh;
+  }
+
+  .cardTitle span {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .cardText {
+    overflow-x: auto;
+    overflow-y: auto;
+    height: 30vh;
+    padding: 1%;
+  }
 }

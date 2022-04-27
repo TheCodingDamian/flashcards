@@ -1,6 +1,5 @@
 .container {
   padding: 0 2rem;
-  overflow: scroll;
   padding-top: 15vh;
 }
 
@@ -13,7 +12,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  overflow: scroll;
 }
 
 .footer {
@@ -213,7 +211,7 @@
 }
 
 .textInput {
-  margin-bottom: 10%;
+  margin-bottom: 8%;
   height: 20vh;
 }
 
@@ -284,4 +282,13 @@
 
 .topBarBack:active {
   background-color: rgba(0, 0, 0, 0.3);
+}
+
+@media (min-width: 768px) {
+  .submitButton {
+    position: relative;
+    left: auto;
+    width: 100%;
+    margin-bottom: 1%;
+  }
 }
